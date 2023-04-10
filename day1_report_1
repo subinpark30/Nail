@@ -1,4 +1,4 @@
-//2-4. 다음 중 변수를 잘못 초기화 한 것은?
+//2-4. 다음 중 변수를 잘못 초기화 한 것은? char c = '';, char answer = 'no';
 byte b = 256;
 char c = '';
 char answer = 'no';
@@ -7,13 +7,13 @@ double d = 1.4e3f;
 
 
 //2-7. 다음 문장들의 출력 결과를 적으세요. 오류가 있는 문장의 경우, '오류' 라고 적으세요.
-System.out.println("1" + "2");
-System.out.println(true+"");
-System.out.println('A' + 'B');
-System.out.println('1' + 2);
-System.out.println('1' + '2');
-System.out.println('J' +"ava");
-System.out.println(true + null);
+System.out.println("1" + "2"); 12
+System.out.println(true+""); true
+System.out.println('A' + 'B'); 131
+System.out.println('1' + 2); 51
+System.out.println('1' + '2'); 99
+System.out.println('J' +"ava"); Java
+System.out.println(true + null); 오류
 
 
 
@@ -23,9 +23,14 @@ public class Exercise2_8{
        int x = 1;
        int y = 2;
        int z = 3;
-       /*
-          알맞은 코드를 넣어 완성하세요.
-       */
+       
+       int temp;
+
+       temp = x;
+       x = y;
+       y = z;
+       z = temp;
+            
        System.out.println("x="+x);
        System.out.println("y="+y);
        System.out.println("z="+z);
